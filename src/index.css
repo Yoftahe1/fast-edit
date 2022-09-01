@@ -2,19 +2,19 @@
   margin: 0;
   padding: 0;
 }
-.container{
+.coding-page{
   height: 100vh;
   overflow: hidden;
 }
 .export-modal{
   width:500px;
-  height: 200px;
+  height: 160px;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
   color: white;
-  background-color: rgb(49, 44, 54);
+  background-color: rgb(22, 21, 21); 
   padding: 25px;
   border-radius: 12px;
 }
@@ -26,12 +26,36 @@
   right: 0;
   background-color: rgba(0,0,0,.7);
 }
-input{
-  height: 30px;
+.modal-h4{
+  margin: 10px 0;
+}
+.modal-p{
+  margin: 10px 0 0 0;
+}
+.modal-input{
+  height: 40px;
   width: 100%;
+  border: 0;
+  margin-bottom:15px;
+  border-radius: 5px;
+}
+.modal-button{
+  color: white;
+  background-color: transparent;
+  height: 40px;
+  width: 80px;
+  padding: 2px 18px;
+  border: 2px solid white;
+  border-radius: 5px;
+  font-family: 'Kdam Thmor Pro', sans-serif;
+  margin-right: 10px;
+}
+.modal-button:hover{
+  cursor:pointer;
+  color: aqua;
 }
 .top-pane{
-  height: 50vh;
+  /* height: 50vh; */
   
 }
 .header{
@@ -70,13 +94,16 @@ input{
   background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAeCAYAAADkftS9AAAAIklEQVQoU2M4c+bMfxAGAgYYmwGrIIiDjrELjpo5aiZeMwF+yNnOs5KSvgAAAABJRU5ErkJggg==');
   cursor: col-resize;
 }
+.editor{
+  height: calc(50vh - 39px);
+}
 .editor-title{
   color: white;
   background-color: rgb(22, 21, 21);
   font-family: 'Kdam Thmor Pro', sans-serif;
 }
 .editor-text-area{ 
-  height: calc(50vh - 62px);
+  height: calc(50vh - 63px);
 }
 .cm-editor{
   height: 100% !important;
