@@ -4,6 +4,8 @@ const storeContext = createContext({
   html: "",
   css: "*{\n  margin:0;\n  padding:0;\n}",
   js: "",
+  otherLanguage:"",
+  selectedLanguage:"web",
   isExporting: false,
   htmlHandler: (html) => {},
   cssHandler: (css) => {},
@@ -15,6 +17,8 @@ export function StoreContextProvider(props) {
   const [html, setHtml] = useState("");
   const [css, setCss] = useState("*{\n  margin:0;\n  padding:0;\n}");
   const [js, setJs] = useState("");
+  const [otherLanguage,setOtherLanguage]=useState('')
+  const [selectedLanguage, setSelectedLanguage] = useState("web");
   const [isExporting, setIsExporting] = useState(false);
   function htmlHandler(html) {
     setHtml(html);
@@ -25,6 +29,12 @@ export function StoreContextProvider(props) {
   function jsHandler(js) {
     setJs(js);
   }
+  function otherLanguageHandler(otherLanguage) {
+    setOtherLanguage(otherLanguage);
+  }
+  function selectedLanguageHandler(selectedLanguage) {
+    setSelectedLanguage(selectedLanguage);
+  }
   function isExportingHandler() {
     setIsExporting(!isExporting);
   }
@@ -32,10 +42,14 @@ export function StoreContextProvider(props) {
     html: html,
     css: css,
     js: js,
+    otherLanguage:otherLanguage,
+    selectedLanguage:selectedLanguage,
     isExporting: isExporting,
     htmlHandler: htmlHandler,
     cssHandler: cssHandler,
     jsHandler: jsHandler,
+    otherLanguageHandler:otherLanguageHandler,
+    selectedLanguageHandler:selectedLanguageHandler,
     isExportingHandler: isExportingHandler,
   };
   return (

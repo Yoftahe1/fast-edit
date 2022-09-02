@@ -1,18 +1,31 @@
-import React, { useContext } from 'react'
-import storeContext from '../store/Store'
+import React, { useContext} from "react";
+import storeContext from "../store/Store";
 
-const Header = () => {
-    const storeCtx=useContext(storeContext) 
+const Header = (props) => {
+  const storeCtx = useContext(storeContext);
   return (
     <>
-        <div className="header">
-          <h2>FAST EDIT</h2>
-          <button className="export-button" onClick={storeCtx.isExportingHandler}>
+      <div className="header">
+        <h2>FAST EDIT</h2>
+        <span>
+        {storeCtx.selectedLanguage!=="web"&&<button className="export-button">RUN</button>}
+          <button
+            className="export-button"
+            onClick={storeCtx.isExportingHandler}
+          >
             EXPORT
           </button>
-        </div>
+          <button
+            className="language-button"
+            onClick={() => props.setShowLanguage(!props.showLanguage)}
+          >
+            {props.showLanguage ? "CANCEL" : "CHOOSE LANGUAGE"}
+          </button>
+          
+        </span>
+      </div>
     </>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;
