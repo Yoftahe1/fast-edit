@@ -9,7 +9,7 @@ const OtherProgramingLanguagePage = (props) => {
   return (
     <div>
         <Editor language={storeCtx.selectedLanguage} value={storeCtx.otherLanguage} onChange={storeCtx.otherLanguageHandler} />
-        <textarea className='textarea' id={id}value={storeCtx.otherLanguageOutput} readOnly/>
+        <textarea className='textarea' id={id} value={storeCtx.otherLanguageOutput} readOnly/>
     </div>
   )
 }

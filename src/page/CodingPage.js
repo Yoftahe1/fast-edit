@@ -17,7 +17,7 @@ const CodingPage = () => {
   function changeLanguageHandler(element) {
     if (storeCtx.selectedLanguage !== element) {
       storeCtx.otherLanguageHandler("");
-      storeCtx.otherLanguageOutputHandler("");
+      storeCtx.otherLanguageOutputHandler("run your code to see output");
 
       localStorage.setItem("selectedLanguage", element);
     }
