@@ -5,15 +5,22 @@ import WebCodingPage from "./WebCodingPage";
 import OtherProgramingLanguagePage from "./OtherProgramingLanguagePage";
 import storeContext from "../store/Store";
 const CodingPage = () => {
+
   const storeCtx = useContext(storeContext);
   const [showLanguage, setShowLanguage] = useState(false);
-  const languages = ["C++","JS","web"];
+  const languages = ["c","cpp","cs","go","java","js","py","web"];
+  
+
   function changeLanguageHAndler(element){
-    setShowLanguage(false);
+    
     if(storeCtx.selectedLanguage!==element){
       storeCtx.otherLanguageHandler('')
+      storeCtx.otherLanguageOutputHandler('')
     }
     storeCtx.selectedLanguageHandler(element);
+    localStorage.setItem('selectedLanguage',element)
+    console.log(localStorage.getItem('selectedLanguage'))
+    setShowLanguage(false);
   }
   return (
     <div className="coding-page">
