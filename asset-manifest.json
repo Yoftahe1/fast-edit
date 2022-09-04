@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/fast-edit/static/css/main.7bd6d7f5.css",
+    "main.js": "/fast-edit/static/js/main.19ddb2a1.js",
+    "static/media/devices.png": "/fast-edit/static/media/devices.9a6d1ba3bdd29f47e7aa.png",
+    "index.html": "/fast-edit/index.html",
+    "main.7bd6d7f5.css.map": "/fast-edit/static/css/main.7bd6d7f5.css.map",
+    "main.19ddb2a1.js.map": "/fast-edit/static/js/main.19ddb2a1.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7bd6d7f5.css",
+    "static/js/main.19ddb2a1.js"
+  ]
+}
