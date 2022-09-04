@@ -1,38 +1,43 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState,useEffect } from "react";
 import Header from "../component/Header";
 import Export from "../component/export";
 import WebCodingPage from "./WebCodingPage";
 import OtherProgramingLanguagePage from "./OtherProgramingLanguagePage";
 import storeContext from "../store/Store";
+import languages from "../constants/Languages";
 const CodingPage = () => {
-
   const storeCtx = useContext(storeContext);
   const [showLanguage, setShowLanguage] = useState(false);
-  const languages = ["c","cpp","cs","go","java","js","py","web"];
-  
+  const [isLoading,setISLoading]=useState(true)
+  useEffect(()=>{
+    storeCtx.selectedLanguageHandler(localStorage.getItem('selectedLanguage'))
+    setISLoading(false)
+  },[storeCtx])
 
-  function changeLanguageHAndler(element){
-    
-    if(storeCtx.selectedLanguage!==element){
-      storeCtx.otherLanguageHandler('')
-      storeCtx.otherLanguageOutputHandler('')
+  function changeLanguageHandler(element) {
+    if (storeCtx.selectedLanguage !== element) {
+      storeCtx.otherLanguageHandler("");
+      storeCtx.otherLanguageOutputHandler("");
+
+      localStorage.setItem("selectedLanguage", element);
     }
     storeCtx.selectedLanguageHandler(element);
-    localStorage.setItem('selectedLanguage',element)
-    console.log(localStorage.getItem('selectedLanguage'))
+
     setShowLanguage(false);
   }
-  return (
-    <div className="coding-page">
+  if(isLoading) return<div><header/></div>
+  
+   return (
+    <div className="coding-page" >
       {storeCtx.isExporting && <Export />}
       <Header showLanguage={showLanguage} setShowLanguage={setShowLanguage} />
-      {showLanguage && (
+       { showLanguage && (
         <div className="languages">
-          {languages.map((element,index) => (
+          {languages.map((element, index) => (
             <div
               className="language"
               key={index}
-              onClick={()=>changeLanguageHAndler(element)}
+              onClick={() => changeLanguageHandler(element)}
             >
               {element}
             </div>

@@ -5,8 +5,8 @@ const Export = (props) => {
   const storeCtx = useContext(storeContext);
   const [fileName, setFileName] = useState("");
   let srcDoc;
-  if(storeCtx.selectedLanguage==='web'){
-  srcDoc = `
+  if (storeCtx.selectedLanguage === "web") {
+    srcDoc = `
   <!DOCTYPE html>
   <html lang="en">
   <head>
@@ -21,10 +21,10 @@ const Export = (props) => {
     <script>${storeCtx.js}</script>
   </body>
   </html>
-`}
-else{
-  srcDoc=storeCtx.otherLanguage
-}
+`;
+  } else {
+    srcDoc = storeCtx.otherLanguage;
+  }
   function changeHandler(event) {
     setFileName(event.target.value);
   }
@@ -32,8 +32,11 @@ else{
     const element = document.createElement("a");
     const file = new Blob([srcDoc], { type: "text/plain;charset=utf-8" });
     element.href = URL.createObjectURL(file);
-    if(storeCtx.selectedLanguage==='web'){element.download = `${fileName}.html`;}
-    else{element.download = `${fileName}.${storeCtx.selectedLanguage.toLowerCase()}`;}
+    if (storeCtx.selectedLanguage === "web") {
+      element.download = `${fileName}.html`;
+    } else {
+      element.download = `${fileName}.${storeCtx.selectedLanguage.toLowerCase()}`;
+    }
     document.body.appendChild(element);
     element.click();
     storeCtx.isExportingHandler();

@@ -3,7 +3,6 @@ import Split from "react-split";
 import Editor from "../component/Editor";
 import storeContext from "../store/Store";
 const WebCodingPage = () => {
-  // const windowWidth = window.screen.availWidth;
   const storeCtx = useContext(storeContext);
   const srcDoc = `
   <html>

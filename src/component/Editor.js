@@ -6,6 +6,7 @@ import { cpp } from "@codemirror/lang-cpp";
 import { java } from "@codemirror/lang-java";
 import { python } from "@codemirror/lang-python";
 import { javascript } from "@codemirror/lang-javascript";
+
 function Editor(props) {
   const onChange = useCallback(
     (value, viewUpdate) => {
@@ -14,6 +15,15 @@ function Editor(props) {
     [props]
   );
 
+  let ext = {
+    HTML: [html({ jsx: true })],
+    CSS: [css({ jsx: true })],
+    cpp: [cpp({ jsx: true })],
+    java: [java({ jsx: true })],
+    py: [python({ jsx: true })],
+    js: [javascript({ jsx: true })],
+  };
+  
   return (
     <div className="editor">
       <div className="editor-title">{props.language}</div>
@@ -21,19 +31,7 @@ function Editor(props) {
         <CodeMirror
           value={props.value}
           theme="dark"
-          extensions={
-            props.language === "HTML"
-              ? [html({ jsx: true })]
-              : props.language === "CSS"
-              ? [css({ jsx: true })]
-              : props.language==='cpp'
-              ? [cpp({ jsx: true })]
-              : props.language==='java'
-              ? [java({ jsx: true })]
-              : props.language==='py'
-              ? [python({ jsx: true })]
-              : [javascript({ jsx: true })]
-          }
+          extensions={ext[props.language]}
           onChange={onChange}
         />
       </div>
