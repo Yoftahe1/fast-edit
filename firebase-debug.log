@@ -1,0 +1,31 @@
+[debug] [2022-09-06T14:32:11.781Z] ----------------------------------------------------------------------
+[debug] [2022-09-06T14:32:11.788Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\YOFTAHE\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2022-09-06T14:32:11.789Z] CLI Version:   11.8.0
+[debug] [2022-09-06T14:32:11.790Z] Platform:      win32
+[debug] [2022-09-06T14:32:11.790Z] Node Version:  v18.4.0
+[debug] [2022-09-06T14:32:11.793Z] Time:          Tue Sep 06 2022 05:32:11 GMT-0900 (Hawaii-Aleutian Daylight Time)
+[debug] [2022-09-06T14:32:11.794Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-09-06T14:32:11.998Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-09-06T14:32:12.000Z] > authorizing via signed-in user (yoftahemerkebu2@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\YOFTAHE\Desktop\react\text editor\client\fastedit
+
+Before we get started, keep in mind:
+
+  * You are initializing within an existing Firebase project directory
+
+[debug] [2022-09-06T14:32:30.599Z] Error: Timed out.
+    at Timeout._onTimeout (C:\Users\YOFTAHE\AppData\Roaming\npm\node_modules\firebase-tools\lib\utils.js:253:49)
+    at listOnTimeout (node:internal/timers:564:17)
+    at process.processTimers (node:internal/timers:507:7)
+[error] 
+[error] Error: An unexpected error has occurred.
