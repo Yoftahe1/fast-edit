@@ -211,6 +211,7 @@ img {
   border: 7px solid gray;
   padding-left: 20px;
   padding-top: 20px;
+  resize: none;
 }
 #true {
   color: rgb(0, 255, 38);

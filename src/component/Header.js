@@ -7,7 +7,7 @@ const Header = (props) => {
   const navigate=useNavigate();
   const storeCtx = useContext(storeContext);
   function execute() {
-    if(storeCtx.otherLanguage.trim()===0)storeCtx.otherLanguageOutputHandler("INPUT IS EMPTY")
+    if(storeCtx.otherLanguage.trim().length===0)storeCtx.otherLanguageOutputHandler("INPUT IS EMPTY")
     else storeCtx.otherLanguageOutputHandler("LOADING...");
     var data = qs.stringify({
       code: storeCtx.otherLanguage,
@@ -25,7 +25,6 @@ const Header = (props) => {
 
     Axios(config)
       .then(function (response) {
-        console.log(response.data);
         
       storeCtx.successHandler(response.data.success)
         if (response.data.output) {
