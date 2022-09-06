@@ -1,11 +1,14 @@
 import React, { useContext } from "react";
+import {useNavigate} from 'react-router-dom';
 import storeContext from "../store/Store";
 import qs from "qs";
 import Axios from "axios";
 const Header = (props) => {
+  const navigate=useNavigate();
   const storeCtx = useContext(storeContext);
   function execute() {
-    storeCtx.otherLanguageOutputHandler("LOADING...");
+    if(storeCtx.otherLanguage.trim()===0)storeCtx.otherLanguageOutputHandler("INPUT IS EMPTY")
+    else storeCtx.otherLanguageOutputHandler("LOADING...");
     var data = qs.stringify({
       code: storeCtx.otherLanguage,
       language: storeCtx.selectedLanguage,
@@ -38,8 +41,8 @@ const Header = (props) => {
   return (
     <>
       <div className="header">
-        <h2>FAST EDIT</h2>
-        <span>
+        <h2 onClick={()=>navigate('/')}>FAST EDIT</h2>
+        <div className="header-btns">
           {storeCtx.selectedLanguage !== "web" && (
             <button className="export-button" onClick={execute}>
               RUN
@@ -55,9 +58,9 @@ const Header = (props) => {
             className="language-button"
             onClick={() => props.setShowLanguage(!props.showLanguage)}
           >
-            {props.showLanguage ? "CANCEL" : "CHOOSE LANGUAGE"}
+            {props.showLanguage ? "CANCEL" : "LANGUAGES"}
           </button>
-        </span>
+        </div>
       </div>
     </>
   );

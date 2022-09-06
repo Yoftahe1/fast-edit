@@ -1,82 +1,82 @@
-*{
+* {
   margin: 0;
   padding: 0;
   text-decoration: none;
 }
-.front-page{
-  height:100vh;
+.front-page {
+  height: 100vh;
   background-color: rgb(22, 21, 21);
   color: white;
-  font-family: 'Kdam Thmor Pro', sans-serif;
+  font-family: "Kdam Thmor Pro", sans-serif;
   overflow: hidden;
 }
-.nav{
+.nav {
   display: flex;
   justify-content: space-between;
   border-bottom: 1px solid gray;
 }
-.start-coding-button{
+.start-coding-button {
   color: white;
   background-color: transparent;
   padding: 10px 18px;
   border: 2px solid white;
   border-radius: 5px;
   margin-left: 10px;
-  font-family: 'Kdam Thmor Pro', sans-serif;
+  font-family: "Kdam Thmor Pro", sans-serif;
 }
-.start-coding-button:hover{
-  cursor:pointer;
+.start-coding-button:hover {
+  cursor: pointer;
   color: aqua;
 }
-.subheader{
+.subheader {
   text-align: center;
 }
-.img-div{
+.img-div {
   display: flex;
   justify-content: center;
 }
-img{
+img {
   width: 60vw;
 }
-.coding-page{
+.coding-page {
   height: 100vh;
   overflow: hidden;
 }
-.export-modal{
-  width:500px;
+.export-modal {
+  width: 500px;
   height: 160px;
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
   color: white;
-  background-color: rgb(22, 21, 21); 
+  background-color: rgb(22, 21, 21);
   padding: 25px;
   border-radius: 12px;
-  font-family: 'Kdam Thmor Pro', sans-serif;
+  font-family: "Kdam Thmor Pro", sans-serif;
 }
-.overlay{
+.overlay {
   position: fixed;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: rgba(0,0,0,.7);
+  background-color: rgba(0, 0, 0, 0.7);
 }
-.modal-h4{
+.modal-h4 {
   margin: 10px 0;
 }
-.modal-p{
+.modal-p {
   margin: 10px 0 0 0;
 }
-.modal-input{
+.modal-input {
   height: 40px;
   width: 100%;
   border: 0;
-  margin-bottom:15px;
+  margin-bottom: 15px;
   border-radius: 5px;
 }
-.modal-button{
+.modal-button {
   color: white;
   background-color: transparent;
   height: 40px;
@@ -84,82 +84,88 @@ img{
   padding: 2px 18px;
   border: 2px solid white;
   border-radius: 5px;
-  font-family: 'Kdam Thmor Pro', sans-serif;
+  font-family: "Kdam Thmor Pro", sans-serif;
   margin-right: 10px;
 }
-.modal-button:hover{
-  cursor:pointer;
+.modal-button:hover {
+  cursor: pointer;
   color: aqua;
 }
-.header{
+.header {
   width: 100vw;
-  background-color: rgb(22, 21, 21); 
+  height: 39px;
+  background-color: rgb(22, 21, 21);
   color: white;
-  font-family: 'Kdam Thmor Pro', sans-serif;
+  font-family: "Kdam Thmor Pro", sans-serif;
   display: flex;
   justify-content: space-between;
-  border-bottom:1px solid gray ;
+  border-bottom: 1px solid gray;
 }
-.export-button{
+.header h2{
+  cursor: pointer;
+}
+.header-btns{
+  display: flex;
+  gap: 10px;
+}
+.export-button {
   height: 100%;
   color: white;
   background-color: transparent;
-  padding: 2px 18px;
+  padding: 0 2vw;
   border: 2px solid white;
   border-radius: 5px;
-  margin-left: 10px;
-  font-family: 'Kdam Thmor Pro', sans-serif;
+  font-family: "Kdam Thmor Pro", sans-serif;
 }
-.export-button:hover{
-  cursor:pointer;
+.export-button:hover {
+  cursor: pointer;
   color: aqua;
 }
-.language-button{
+.language-button {
   height: 100%;
-  width: 140px;
+  padding: 0 2vw;
   color: white;
   background-color: transparent;
   border: 2px solid white;
   border-radius: 5px;
-  margin: 0 10px;
-  font-family: 'Kdam Thmor Pro', sans-serif;
+  font-family: "Kdam Thmor Pro", sans-serif;
 }
-.language-button:hover{
-  cursor:pointer;
+.language-button:hover {
+  cursor: pointer;
   color: aqua;
 }
-.change-language{
+.change-language {
   text-align: center;
   border: 2px solid white;
   border-radius: 5px;
 }
-.languages{
-  width:136px;
+.languages {
+  width: 136px;
   color: white;
   background-color: rgb(22, 21, 21);
   position: absolute;
-  right: 10px; 
+  right: 10px;
   z-index: 1000;
   border: 2px solid white;
   border-top: 0;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
 }
-.language{
+.language {
   height: 30px;
   text-align: center;
   padding-top: 10px;
   border-bottom: 1px solid gray;
 }
-.language:hover{
-  cursor:pointer;
+.language:hover {
+  cursor: pointer;
   color: aqua;
   border-bottom: 1px solid aqua;
 }
 .split {
   display: flex;
   flex-direction: row;
-  width:100vw;
+  width: 100vw;
 }
 .gutter {
   background-color: #eee;
@@ -168,38 +174,36 @@ img{
   background-position: 50%;
 }
 .gutter.gutter-horizontal {
-  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAeCAYAAADkftS9AAAAIklEQVQoU2M4c+bMfxAGAgYYmwGrIIiDjrELjpo5aiZeMwF+yNnOs5KSvgAAAABJRU5ErkJggg==');
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAeCAYAAADkftS9AAAAIklEQVQoU2M4c+bMfxAGAgYYmwGrIIiDjrELjpo5aiZeMwF+yNnOs5KSvgAAAABJRU5ErkJggg==");
   cursor: col-resize;
 }
-.editor{
+.editor {
   height: calc(50vh - 39px);
 }
-.editor-title{
+.editor-title {
   color: white;
   background-color: rgb(22, 21, 21);
-  font-family: 'Kdam Thmor Pro', sans-serif;
+  font-family: "Kdam Thmor Pro", sans-serif;
 }
-.editor-text-area{ 
+.editor-text-area {
   height: calc(50vh - 63px);
 }
-.cm-editor{
+.cm-editor {
   height: 100% !important;
 }
-.cm-theme-dark{
+.cm-theme-dark {
   height: 100% !important;
 }
-.iframe{
+.iframe {
   width: 100vw;
   height: 50vh;
   border: 0;
 }
 
-
-
-.textarea{
+.textarea {
   box-sizing: border-box;
   min-height: 50vh;
-  min-width: 100vw;
+  width: 100vw;
   outline: none;
   font-size: 25px;
   color: gray;
@@ -207,11 +211,11 @@ img{
   padding-left: 20px;
   padding-top: 20px;
 }
-#true{
+#true {
   color: rgb(0, 255, 38);
   border: 7px solid rgb(0, 255, 38);
 }
-#false{
+#false {
   color: rgb(255, 0, 43);
   border: 7px solid rgb(255, 0, 34);
 }
@@ -223,9 +227,26 @@ img{
   border-radius: 10px;
 }
 ::-webkit-scrollbar-thumb {
-  background: gray; 
+  background: gray;
   border-radius: 10px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: rgb(209, 199, 199); 
+  background: rgb(209, 199, 199);
 }
+@media(max-width:350px){
+.header h2{
+  font-size: 5vw;
+  padding-top: 7px;
+}
+}
+@media(max-width:290px){
+  .header h2{
+    
+    padding-top: 0px;
+  }
+  }
+  @media(max-width:565px){
+    .export-modal{
+      width:80%;
+    }
+    }
