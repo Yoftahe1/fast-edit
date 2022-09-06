@@ -140,11 +140,12 @@ img {
   border-radius: 5px;
 }
 .languages {
-  width: 136px;
+  width: 47px;
+  padding: 0 2vw;
   color: white;
   background-color: rgb(22, 21, 21);
   position: absolute;
-  right: 10px;
+  right: 0px;
   z-index: 1000;
   border: 2px solid white;
   border-top: 0;
