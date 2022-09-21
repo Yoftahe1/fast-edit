@@ -26,7 +26,7 @@ const WebCodingPage = () => {
             onChange={storeCtx.cssHandler}
           />
           <Editor
-            language="JS"
+            language="js"
             value={storeCtx.js}
             onChange={storeCtx.jsHandler}
           />
