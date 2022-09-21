@@ -22,6 +22,9 @@ function Editor(props) {
     java: [java({ jsx: true })],
     py: [python({ jsx: true })],
     js: [javascript({ jsx: true })],
+    go: [javascript({ jsx: true })],
+    c: [cpp({ jsx: true })],
+    cs: [cpp({ jsx: true })],
   };
   
   return (
