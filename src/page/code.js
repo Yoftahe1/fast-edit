@@ -1,9 +1,12 @@
 import React, { useContext } from "react";
 import Split from "react-split";
+import Header from "../component/Header";
+import Export from "../component/export";
 import Editor from "../component/Editor";
-import storeContext from "../store/Store";
-const WebCodingPage = () => {
-  const storeCtx = useContext(storeContext);
+import Store from "../store/Store";
+import styles from "./code.module.css";
+const Code = () => {
+  const storeCtx = useContext(Store);
   const srcDoc = `
   <html>
     <body>${storeCtx.html}</body>
@@ -12,9 +15,11 @@ const WebCodingPage = () => {
   </html>
 `;
   return (
-    <div className="container">
-      <div className="top-pane">
-        <Split className="split" minSize={50}>
+    <div className={styles.code}>
+      {storeCtx.isExporting && <Export />}
+      <Header />
+      <div>
+        <Split className={styles.split} minSize={50}>
           <Editor
             language="HTML"
             value={storeCtx.html}
@@ -32,10 +37,11 @@ const WebCodingPage = () => {
           />
         </Split>
       </div>
-      <div className="bottom-pane">
-        <iframe className="iframe" title="output" srcDoc={srcDoc} />
+      <div className={styles.bottom}>
+        <iframe title="output" srcDoc={srcDoc} />
       </div>
     </div>
   );
 };
-export default WebCodingPage;
+
+export default Code;

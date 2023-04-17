@@ -1,0 +1,12 @@
+.editor {
+  height: calc(50vh - 25px);
+}
+.title {
+  color: white;
+  background-color: rgb(22, 21, 21);
+  font-family: "Kdam Thmor Pro", sans-serif;
+  text-align: center;
+}
+.textarea {
+  height: calc(100% - 24px);
+}

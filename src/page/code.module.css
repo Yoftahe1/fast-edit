@@ -1,0 +1,18 @@
+.code {
+  height: 100vh;
+  overflow: hidden;
+}
+.split {
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+}
+.bottom {
+  height: calc(50vh - 25px);
+}
+iframe {
+  height: calc(50vh - 25px);
+  width: 100%;
+  outline: 0;
+  border: 0;
+}

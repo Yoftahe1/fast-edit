@@ -1,0 +1,55 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.h4 {
+  margin: 10px 0;
+}
+.p {
+  margin: 10px 0 0 0;
+}
+.input {
+  height: 40px;
+  width: 100%;
+  border: 0;
+  padding-left: 10px;
+  background-color: rgba(223, 222, 222, 0.596);
+  margin-bottom: 15px;
+  border-radius: 5px;
+}
+.button {
+  background-color: transparent;
+  height: 40px;
+  width: 80px;
+  padding: 2px 18px;
+  border: 2px solid black;
+  border-radius: 5px;
+  font-family: "Kdam Thmor Pro", sans-serif;
+  margin-right: 10px;
+}
+.button:hover {
+  cursor: pointer;
+  color: white;
+  background-color: black;
+}
+.modal {
+  width: 500px;
+  height: 160px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 25px;
+  border-radius: 12px;
+  font-family: "Kdam Thmor Pro", sans-serif;
+}
+@media (max-width: 565px) {
+  .modal {
+    width: 80%;
+  }
+}

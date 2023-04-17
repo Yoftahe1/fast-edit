@@ -1,0 +1,38 @@
+.header {
+  height: 39px;
+  font-family: "Kdam Thmor Pro", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid gray;
+  padding: 5px 15px;
+}
+.header h1 {
+  cursor: pointer;
+}
+.btns {
+  display: flex;
+  gap: 10px;
+}
+.button {
+  height: 100%;
+  color: black;
+  background-color: transparent;
+  padding: 0 20px;
+  border: 2px solid black;
+  border-radius: 5px;
+  font-family: "Kdam Thmor Pro", sans-serif;
+}
+.button:hover {
+  cursor: pointer;
+  color: white;
+  background-color: black;
+}
+@media (max-width: 650px) {
+  .header h1 {
+    font-size: 25px;
+  }
+  .button {
+    height: 80%;
+  }
+}

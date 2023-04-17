@@ -1,19 +1,18 @@
 import React, { useContext, useState } from "react";
 import { createPortal } from "react-dom";
 import storeContext from "../store/Store";
+import styles from "./export.module.css";
 const Export = (props) => {
   const storeCtx = useContext(storeContext);
-  const [fileName, setFileName] = useState("");
-  let srcDoc;
-  if (storeCtx.selectedLanguage === "web") {
-    srcDoc = `
+  const [fileName, setFileName] = useState("website");
+  let srcDoc = `
   <!DOCTYPE html>
   <html lang="en">
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>${fileName}</title>
     <style>${storeCtx.css}</style>
   </head>
   <body>
@@ -22,9 +21,7 @@ const Export = (props) => {
   </body>
   </html>
 `;
-  } else {
-    srcDoc = storeCtx.otherLanguage;
-  }
+
   function changeHandler(event) {
     setFileName(event.target.value);
   }
@@ -32,32 +29,28 @@ const Export = (props) => {
     const element = document.createElement("a");
     const file = new Blob([srcDoc], { type: "text/plain;charset=utf-8" });
     element.href = URL.createObjectURL(file);
-    if (storeCtx.selectedLanguage === "web") {
-      element.download = `${fileName}.html`;
-    } else {
-      element.download = `${fileName}.${storeCtx.selectedLanguage.toLowerCase()}`;
-    }
+    element.download = `${fileName}.html`;
     document.body.appendChild(element);
     element.click();
     storeCtx.isExportingHandler();
   }
   return createPortal(
     <>
-      <div className="overlay" onClick={storeCtx.isExportingHandler} />
-      <div className="export-modal">
-        <h4 className="modal-h4">Export File</h4>
-        <p className="modal-p">Save File As</p>
+      <div className={styles.overlay} onClick={storeCtx.isExportingHandler} />
+      <div className={styles.modal}>
+        <h4 className={styles.h4}>Export File</h4>
+        <p className={styles.p}>Save File As</p>
         <input
           type="text"
           placeholder="Enter Name"
           onChange={changeHandler}
-          className="modal-input"
+          className={styles.input}
         />
         <br />
-        <button className="modal-button" onClick={storeCtx.isExportingHandler}>
+        <button className={styles.button} onClick={storeCtx.isExportingHandler}>
           Cancel
         </button>
-        <button className="modal-button" onClick={exported}>
+        <button className={styles.button} onClick={exported}>
           export
         </button>
       </div>
