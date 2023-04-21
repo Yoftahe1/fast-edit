@@ -1,4 +1,9 @@
 # FAST EDIT
-this is a website designed to make a website 
-it use's vanila javascript, html and css to design your website
-it made using react framework
+this is a website designed to make a website\ 
+it use's vanila javascript, html and css to design your website\
+it made using react framework\
+# installation 
+git clone\
+npm install\
+npm start\
+
